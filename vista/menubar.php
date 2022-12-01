@@ -3,7 +3,7 @@
     <nav>
         <ul class="menu">
             <li class="home current">
-                <a href="index.php"><span></span></a>
+                <a href="../index.php"><span></span></a>
             </li>
             <?php
             if ($usuario->getRol() == 'administrador') {
