@@ -13,7 +13,7 @@
 
 ### Prerequisites
 
-Estos son algunos de los programas que se utilizaron.
+Programas que se utilizaron para el desarrollo de la aplicacion:
 
 * Apache NetBeans 12.6
   
