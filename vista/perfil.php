@@ -18,7 +18,7 @@ $usuario = unserialize(SessionControl::get("USUARIO"));
         <div id="wrap">
             <div class="container" >
                 <div class="header">
-                    <a href="#">
+                    <a href="">
                         <img src="img/logo.jpg" alt="logo" name="logo" width="612" height="206" />
                     </a> 
 
