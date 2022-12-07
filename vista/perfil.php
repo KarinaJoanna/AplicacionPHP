@@ -2,7 +2,9 @@
 require_once("inicio.php");
 require_once(__ROOT__ . "/control/SessionControl.php");
 require_once(__ROOT__ . "/modelo/UsuarioModelo.php");
+
 SessionControl::testSession();
+SessionControl::checkSession();
 
 $usuario = unserialize(SessionControl::get("USUARIO"));
 ?>
@@ -18,7 +20,7 @@ $usuario = unserialize(SessionControl::get("USUARIO"));
         <div id="wrap">
             <div class="container" >
                 <div class="header">
-                    <a href="">
+                    <a href="#">
                         <img src="img/logo.jpg" alt="logo" name="logo" width="612" height="206" />
                     </a> 
 
@@ -26,8 +28,8 @@ $usuario = unserialize(SessionControl::get("USUARIO"));
 
                 <div id="profile">
                     <?php
-                    echo "<strong>Bienvenido: </strong><em> " . $usuario->getNombre() . " </em><strong>/  Rol </strong>: <em> " . $usuario->getRol() . " </em>";
-                    ?>
+             echo "<strong>Bienvenido: </strong><em> " . $usuario->getNombre() . " </em><strong>/  Rol </strong>: <em> " . $usuario->getRol() . " </em>";
+            ?>
                     <strong id="logout"><a href="logout.php">Salir</a></strong>
                 </div>
                 <?php require_once("menubar.php"); ?>

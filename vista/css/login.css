@@ -50,6 +50,19 @@ input[type=submit] {
     margin-bottom:10px
 }
 
+input[type=button] {
+    width:45.5%;
+    background-color:#014DA1;
+    color:#fff;
+    border:1px solid #39D2B4;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top:8px;
+    margin-bottom:10px
+}
+
 a {
     text-decoration:none;
     color:#6495ed

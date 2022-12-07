@@ -15,11 +15,11 @@ $control->createOrUpdate();
 <html>
     <head>
         <meta charset="utf-8">        
-        <title>Usuario</title>
+        <title>Usuarios</title>
         <link href="css/master.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/menu.css" media="all">
         <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
-        <script src="js/cat_usuario.js" defer></script>
+        <script src="js/list_usuario.js" defer></script>
     </head>
     <body>
         <div id="wrap">
@@ -39,23 +39,28 @@ $control->createOrUpdate();
                 </div>
                 <?php require_once("menubar.php"); ?>
                 <seccion>
-                    <p class="seccion-titulo">Usuarios</p> 
+                    <p class="seccion-titulo">Lista de Usuarios</p> 
 
-                    <?php $control->printCatalogo($catalogo); ?>
+                    <?php $control->printUsuarios($catalogo); ?>
 
                     <div id="login" class="center">
-                        <h2>Operaciones</h2>
+                        <h2>Modificar Usuario</h2>
                         <p>
                             <input type="button" id="nuevo"  value="Nuevo">
                             <input type="button" id="modificar" value="Modificar">
                         </p> 
                         <form action="" method="post">
                             <input type="hidden" value="" id="idusuario" name="idusuario">
-                            <label>Nombre :</label>
-                            <input id="nombre" name="nombre" placeholder="Nombre del usuario" type="text" disabled>
-                            <label>Apellido :</label>
-
+                            <label>Nombre:</label>
+                            <input id="nombre" name="nombre" placeholder="Nombre" type="text" disabled>
+                            <label>Apellido:</label>
                             <input id="apellido" name="apellido" placeholder="Apellido" type="text" disabled>
+                            <label>Login:</label>
+                            <input id="log" name="login" placeholder="Login" type="text" disabled> 
+                            <label>Password:</label>
+                            <input id="password" name="password" placeholder="Password" type="text" disabled>
+                            <label>Rol:</label>
+                            <input id="rol" name="rol" placeholder="Rol" type="text" disabled>
                             <input name="submit" type="submit" value=" Guardar ">
                         </form>
                     </div>
@@ -64,7 +69,7 @@ $control->createOrUpdate();
                 </seccion>
             </div>
             <div class="footer">
-                
+
             </div>
         </div>
     </body>

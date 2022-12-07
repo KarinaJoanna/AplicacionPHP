@@ -7,8 +7,17 @@ SessionControl::testSession();
 SessionControl::checkSession();
 
 $usuario = unserialize(SessionControl::get("USUARIO"));
+
+if ($usuario->getRol() != 'administrador') {
+    SessionControl::destroy();
+    header("Location:../index.php");
+}
+
+
+
 $control = new GeneroControl();
 $catalogo = $control->getCatalogoGenero();
+
 $control->createOrUpdate();
 ?>
 <!DOCTYPE html>
